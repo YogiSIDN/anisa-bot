@@ -38,7 +38,7 @@ const {
     writeExif, 
     writeExifImg, 
     writeExifVid 
-} = require("./tools/exif")
+} = require("./tools/cft")
 
 const question = (text) => {
   const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
