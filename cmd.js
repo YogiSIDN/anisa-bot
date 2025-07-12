@@ -314,7 +314,7 @@ ${desc || "Tidak ada deskripsi."}
             break;
         }
         const [pack, author] = text.split("-");
-        const buffer = await sock.downloadAndSaveMediaMessage(media)
+        const buffer = await qd.download()
         const dataStc = await sock.sendMediaAsSticker(jid, buffer, m, { packname: pack || "", author: author || "@mysu_019" });
         await fs.promises.unlink(buffer);
         await fs.promises.unlink(dataStc);
