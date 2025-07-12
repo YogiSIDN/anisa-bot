@@ -2,8 +2,10 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 const { tmpdir } = require("os");
-const ffmpeg = require("fluent-ffmpeg");
+const ffmpegPath = require('@ffmpeg-installer/ffmpeg').path;
+const ffmpeg = require("fluent-ffmpeg")
 
+ffmpeg.setFfmpegPath(ffmpegPath);
 // Fungsi imageToWebp dari kamu
 async function imageToWebp(media) {
   const tmpFileOut = path.join(tmpdir(), `${crypto.randomBytes(6).readUIntLE(0, 6).toString(36)}.webp`);
