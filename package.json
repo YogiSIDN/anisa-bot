@@ -12,7 +12,7 @@
   "dependencies": {
     "archiver": "^7.0.1",
     "axios": "^1.7.9",
-    "baileys": "npm:@itsukichan/baileys@7.3.1",
+    "baileys": "npm:@vkazee/baileys@1.0.3",
     "booru": "^2.7.0",
     "chalk": "^4.1.2",
     "cheerio": "^1.0.0",
