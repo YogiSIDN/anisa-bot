@@ -10,6 +10,7 @@
   "author": "iG @mysu_019",
   "license": "ISC",
   "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0"
     "archiver": "^7.0.1",
     "axios": "^1.7.9",
     "baileys": "npm:@vkazee/baileys@1.0.3",
