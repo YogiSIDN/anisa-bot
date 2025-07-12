@@ -112,7 +112,7 @@ async function startBase() {
   
   if(!sock.authState.creds.registered) {
     const phoneNumber = await question(chalk.greenBright('Masukan nomor Whatsapp awali dengan 62:\n'));
-    const code = await sock.requestPairingCode("6289528632474")
+    const code = await sock.requestPairingCode(phoneNumber.trim())
     console.log(chalk.yellow(`⚠︎ Kode Pairing Bot Whatsapp kamu :`), chalk.yellow(`${code}`))
 }
   
