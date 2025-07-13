@@ -24,10 +24,11 @@ const moment = require("moment-timezone")
 const msc = require("ytmusic_api_unofficial")
 const fetch = (...args) => import("node-fetch").then(({ default: fetch }) => fetch(...args))
 const { Soundcloud } = require("soundcloud.ts")
-const soundcloud = new Soundcloud({
-    clientId: process.env.SCLIENT,
-    oauthToken: process.env.STOKEN
-})
+const soundcloud = new Soundcloud(
+    process.env.SCLIENT,
+    process.env.STOKEN
+)
+
 
 // Database
 const { Chat } = require("./tools/schema")
@@ -534,7 +535,7 @@ ${desc || "Tidak ada deskripsi."}
         if (await isGroupLimit(jid)) return m.reply(groupTimeReason(await getTimeGroup(jid)))
         await addGroupLimit(jid)
         if (!m.isGroup) return m.reply("Tidak dapat dipakai di private chat.")
-        aniClient.chartAnimeBySeason("summer", 2025).then(animeChart => {
+        aniClient.chartAnimeBySeason("winter", 2025).then(animeChart => {
             chart_text = ""
             animeChart.forEach((chart, index) => {
             chart_text += `
